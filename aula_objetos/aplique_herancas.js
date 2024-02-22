@@ -36,8 +36,20 @@ function Funcionario(name, nacionalidade, idade, cargo, skills, salário, admiss
     Pessoa.call(this, name, nacionalidade, idade);
 }
 
+function Gerente(name, nacionalidade, idade, cargo, skills, salário, admissão, departamento, equipe) {
+    this.departamento = departamento;
+    this.equipe = equipe;
+
+    Pessoa.call(this, name, nacionalidade, idade);
+    this.cargo = cargo;
+    this.skills = skills;
+    this.salário = salário;
+    this.admissão = admissão;
+}
 const douglasPessoa = new Pessoa("Douglas Rodrigues José", "Brasileiro", "47 anos");
 const douglasFuncionario = new Funcionario("Douglas Rodrigues José", "Brasileiro", "47", "Engenheiro front-end", "Designer, Fotógrafo, Professor de fotografia", 30000, "05-05-2024");
+const douglasGerente = new Gerente("arte", 20);
 
 console.log(douglasPessoa);
 console.log(douglasFuncionario);
+console.log(douglasGerente);
